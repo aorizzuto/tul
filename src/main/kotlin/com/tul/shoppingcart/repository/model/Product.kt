@@ -1,9 +1,11 @@
 package com.tul.shoppingcart.repository.model
 
+import org.hibernate.annotations.GenericGenerator
 import org.springframework.data.relational.core.mapping.Column
 import java.math.BigDecimal
 import java.util.*
 import javax.persistence.Entity
+import javax.persistence.GeneratedValue
 import javax.persistence.Id
 import javax.persistence.Table
 
@@ -12,8 +14,13 @@ import javax.persistence.Table
 class Product (
 
     @Id
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+        name = "UUID",
+        strategy = "org.hibernate.id.UUIDGenerator"
+    )
     @Column("id")
-    val id: UUID? = null,
+    val id: UUID = UUID.randomUUID(),
 
     @Column("name")
     val name: String,

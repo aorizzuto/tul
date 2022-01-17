@@ -16,9 +16,9 @@ class ProductsController(
         return productService.getAllProducts()
     }
 
-    @PostMapping("/")
+    @PostMapping("/", produces = ["application/json; charset=utf-8"])
     fun addProduct(@RequestBody request: ProductDTO): String {
-        return ""
+        return productService.saveProduct(request)
     }
 
     @DeleteMapping("/{name}")
