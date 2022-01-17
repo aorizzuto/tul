@@ -1,0 +1,14 @@
+package com.tul.shoppingcart.exceptions
+
+import org.springframework.http.HttpStatus
+import org.springframework.http.HttpStatus.*
+
+enum class ErrorCode (val msg: String, val errorCode: HttpStatus) {
+
+    DESCRIPTION_NOT_FOUND("Description field is missing", BAD_REQUEST),
+    NAME_NOT_FOUND("Name field is missing", BAD_REQUEST),
+    PRICE_NOT_FOUND("Price field is missing", BAD_REQUEST),
+    SKU_NOT_FOUND("SKU field is missing", BAD_REQUEST),
+
+    UNEXPECTED_ERROR("Unexpected error", INTERNAL_SERVER_ERROR)
+}
