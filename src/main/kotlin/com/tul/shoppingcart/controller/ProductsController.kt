@@ -1,19 +1,23 @@
 package com.tul.shoppingcart.controller
 
-import com.tul.shoppingcart.dto.Product
+import com.tul.shoppingcart.dto.ProductDTO
+import com.tul.shoppingcart.repository.model.Product
+import com.tul.shoppingcart.services.ProductService
 import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping(path = ["/product"])
-class ProductsController {
+class ProductsController(
+    val productService: ProductService
+) {
 
     @GetMapping("/all")
-    fun getProducts(): MutableList<String> {
-        return mutableListOf("product1", "product2")
+    fun getProducts(): MutableIterable<Product> {
+        return productService.getAllProducts()
     }
 
     @PostMapping("/")
-    fun addProduct(@RequestBody request: Product): String {
+    fun addProduct(@RequestBody request: ProductDTO): String {
         return ""
     }
 
@@ -23,7 +27,7 @@ class ProductsController {
     }
 
     @PutMapping("/")
-    fun updateProduct(@RequestBody request: Product): String {
+    fun updateProduct(@RequestBody request: ProductDTO): String {
         return ""
     }
 }
