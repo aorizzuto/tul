@@ -1,0 +1,5 @@
+database:
+  h2:
+    url: a
+    port: 3306
+    name: b
