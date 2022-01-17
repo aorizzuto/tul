@@ -12,4 +12,8 @@ object RequestValidator {
         request.price ?: throw BadRequestException(PRICE_NOT_FOUND)
         request.sku ?: throw BadRequestException(SKU_NOT_FOUND)
     }
+
+    fun validateField(id: String?) {
+        id ?: throw BadRequestException(ID_NOT_FOUND)
+    }
 }

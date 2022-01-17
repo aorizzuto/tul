@@ -9,6 +9,5 @@ enum class ErrorCode (val msg: String, val errorCode: HttpStatus) {
     NAME_NOT_FOUND("Name field is missing", BAD_REQUEST),
     PRICE_NOT_FOUND("Price field is missing", BAD_REQUEST),
     SKU_NOT_FOUND("SKU field is missing", BAD_REQUEST),
-
-    UNEXPECTED_ERROR("Unexpected error", INTERNAL_SERVER_ERROR)
+    ID_NOT_FOUND("ID is missing in request", BAD_REQUEST),
 }
