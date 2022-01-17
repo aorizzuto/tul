@@ -3,6 +3,10 @@
 
 This file will show the step by step of the commits since project's creation
 
+## 17/01/2022 20:00 - Branch: feature/put-mapping
+- PUT mapping development
+![img_2.png](img_2.png)
+  
 ## 17/01/2022 20:00 - Branch: feature/delete-item
 - Delete mapping development
 

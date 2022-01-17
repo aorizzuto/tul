@@ -26,8 +26,11 @@ class ProductsController(
         return productService.deleteProduct(id)
     }
 
-    @PutMapping("/")
-    fun updateProduct(@RequestBody request: ProductDTO): String {
-        return ""
+    @PutMapping("/{id}")
+    fun updateProduct(
+        @PathVariable id: String,
+        @RequestBody request: ProductDTO
+    ): Product {
+        return productService.updateProduct(id, request)
     }
 }

@@ -10,6 +10,6 @@ object RequestConverter {
         sku = request.sku!!,
         description = request.description!!,
         price = request.price!!,
-        hasDiscount = request.hasDiscount
+        hasDiscount = request.hasDiscount ?: false
     )
 }

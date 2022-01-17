@@ -17,19 +17,19 @@ class Product (
     val id: UUID = UUID.randomUUID(),
 
     @Column("name")
-    val name: String,
+    var name: String,
 
     @Column("sku")
-    val sku: String,
+    var sku: String,
 
     @Column("description")
-    val description: String,
+    var description: String,
 
     @Column("price")
-    val price: BigDecimal,
+    var price: BigDecimal,
 
     @Column("has_discount")
-    val hasDiscount: Boolean
+    var hasDiscount: Boolean
 ){
     constructor(): this(UUID.randomUUID(), "", "", "", BigDecimal.ZERO, false)
 }
