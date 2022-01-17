@@ -1,6 +1,6 @@
 package com.tul.shoppingcart.controller
 
-import com.tul.shoppingcart.dto.Product
+import com.tul.shoppingcart.dto.ProductDTO
 import org.springframework.web.bind.annotation.*
 
 @RestController
@@ -13,7 +13,7 @@ class ShoppingCartController {
     }
 
     @PostMapping("/")
-    fun addProduct(@RequestBody request: Product): String {
+    fun addProduct(@RequestBody request: ProductDTO): String {
         return ""
     }
 
@@ -23,7 +23,7 @@ class ShoppingCartController {
     }
 
     @PutMapping("/")
-    fun updateProduct(@RequestBody request: Product): String {
+    fun updateProduct(@RequestBody request: ProductDTO): String {
         return ""
     }
 }

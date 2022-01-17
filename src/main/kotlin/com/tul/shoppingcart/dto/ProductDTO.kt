@@ -2,7 +2,7 @@ package com.tul.shoppingcart.dto
 
 import java.math.BigDecimal
 
-class Product(
+class ProductDTO(
     val name: String,
     val sku: String,
     val description: String,

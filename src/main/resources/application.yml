@@ -3,17 +3,4 @@ server:
   servlet:
     context-path: /
 
-logging:
-  level:
-    reactor:
-      netty:
-        http:
-          client:
-            HttpClient: DEBUG
-    org:
-      springframework:
-        http:
-          codec:
-            json: TRACE
-        web:
-          reactive: TRACE
+spring.profiles.active: dev
