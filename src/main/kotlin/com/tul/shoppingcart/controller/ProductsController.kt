@@ -21,9 +21,9 @@ class ProductsController(
         return productService.saveProduct(request)
     }
 
-    @DeleteMapping("/{name}")
-    fun removeProduct(@PathVariable name: String): String {
-        return ""
+    @DeleteMapping("/{id}")
+    fun removeProduct(@PathVariable id: String?): String {
+        return productService.deleteProduct(id)
     }
 
     @PutMapping("/")

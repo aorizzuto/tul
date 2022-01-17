@@ -3,6 +3,9 @@
 
 This file will show the step by step of the commits since project's creation
 
+## 17/01/2022 20:00 - Branch: feature/delete-item
+- Delete mapping development
+
 ## 17/01/2022 17:30 - Branch: feature/services
 - Validations and global exception handler
 ![img_1.png](img_1.png)
