@@ -1,5 +1,6 @@
 package com.tul.shoppingcart.dto
 
+import com.fasterxml.jackson.annotation.JsonProperty
 import java.math.BigDecimal
 
 class ProductDTO(
@@ -7,5 +8,6 @@ class ProductDTO(
     val sku: String?,
     val description: String?,
     val price: BigDecimal?,
-    val hasDiscount: Boolean = false
+    @JsonProperty("has_discount")
+    val hasDiscount: Boolean? = false
 )
