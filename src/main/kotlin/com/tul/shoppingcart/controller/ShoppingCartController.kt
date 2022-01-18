@@ -31,9 +31,4 @@ class ShoppingCartController(
     fun removeProduct(@PathVariable id: String): String {
         return cartService.removeProduct(id)
     }
-
-    @PutMapping("/")
-    fun updateProduct(@RequestBody request: ProductDTO): String {
-        return ""
-    }
 }
