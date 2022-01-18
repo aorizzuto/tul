@@ -3,6 +3,12 @@
 
 This file will show the step by step of the commits since project's creation
 
+## 18/01/2022 12:00 - Branch: feature/cart-repository
+- Update CART status to completed when Cashout
+
+![img_5.png](img_5.png)
+![img_6.png](img_6.png)
+
 ## 18/01/2022 11:00 - Branch: feature/orders
 - Save orders when added to cart
 - Cashout development

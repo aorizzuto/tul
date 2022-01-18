@@ -1,8 +1,9 @@
 package com.tul.shoppingcart.dto
 
 import com.tul.shoppingcart.enums.StatusEnum
+import com.tul.shoppingcart.repository.model.Order
 
 class CartDTO (
-    val products: HashMap<ProductDTO, Int>,
+    val orders: MutableList<Order>,
     val status: StatusEnum
 )
