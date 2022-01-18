@@ -3,6 +3,13 @@
 
 This file will show the step by step of the commits since project's creation
 
+## 18/01/2022 11:00 - Branch: feature/orders
+- Save orders when added to cart
+- Cashout development
+
+![img_3.png](img_3.png)
+![img_4.png](img_4.png)
+
 ## 17/01/2022 20:00 - Branch: feature/put-mapping
 - PUT mapping development
 ![img_2.png](img_2.png)
