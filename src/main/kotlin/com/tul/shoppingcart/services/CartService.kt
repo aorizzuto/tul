@@ -11,6 +11,7 @@ import com.tul.shoppingcart.repository.ProductRepository
 import com.tul.shoppingcart.repository.model.Cart
 import com.tul.shoppingcart.repository.model.Order
 import com.tul.shoppingcart.validations.OrderValidator
+import com.tul.shoppingcart.validations.RequestValidator
 import org.springframework.stereotype.Service
 import java.math.BigDecimal
 import java.util.*
@@ -78,5 +79,26 @@ class CartService(
     private fun updateStatusInCart(actualCart: Cart) {
         actualCart.status = StatusEnum.COMPLETED.value
         cartRepository.save(actualCart)
+    }
+
+    fun getProducts(): List<List<Any>> {
+        val actualCart = findActualCart()
+
+        return actualCart.orders.map { order -> listOf(order.product.name, order.quantity) }
+    }
+
+    fun removeProduct(id: String): String {
+        RequestValidator.validateId(id)
+
+        return try{
+            findActualCart().orders
+                .filter { order -> order.product.id == UUID.fromString(id) }
+                .forEach { orderRepository.delete(it) }
+
+            "Product with ID: $id has been removed from Cart"
+        } catch (exc: Exception) {
+            "There was an issue while trying to remove id $id"
+        }
+
     }
 }
