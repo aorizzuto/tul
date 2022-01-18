@@ -13,8 +13,8 @@ class ShoppingCartController(
 ) {
 
     @GetMapping("/all")
-    fun getProducts(): MutableList<String> {
-        return mutableListOf("product1", "product2")
+    fun getProducts(): List<List<Any>> {
+        return cartService.getProducts()
     }
 
     @GetMapping("/cashout")
@@ -27,9 +27,9 @@ class ShoppingCartController(
         return cartService.addProduct(order)
     }
 
-    @DeleteMapping("/{name}")
-    fun removeProduct(@PathVariable name: String): String {
-        return ""
+    @DeleteMapping("/{id}")
+    fun removeProduct(@PathVariable id: String): String {
+        return cartService.removeProduct(id)
     }
 
     @PutMapping("/")

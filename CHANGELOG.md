@@ -3,6 +3,11 @@
 
 This file will show the step by step of the commits since project's creation
 
+## 18/01/2022 12:30 - Branch: feature/requests-cart
+- Remove product from cart
+
+![img_7.png](img_7.png)
+
 ## 18/01/2022 12:00 - Branch: feature/cart-repository
 - Update CART status to completed when Cashout
 
